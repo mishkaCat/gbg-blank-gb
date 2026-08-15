@@ -1,0 +1,66 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.text-container {
+    margin-top: 1rem;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.coming-soon-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s, visibility 1s;
+}
+
+.coming-soon-text.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+p {
+    font-size: 20px;
+    color: #05312e;
+}
+
+/* Уважаем системную настройку «уменьшить движение». */
+@media (prefers-reduced-motion: reduce) {
+    .logo {
+        animation: none;
+    }
+
+    .coming-soon-text {
+        transition: none;
+    }
+}

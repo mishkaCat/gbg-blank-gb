@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>George Brooks</title>
+    <meta name="description" content="George Brooks — юридическая компания. Новый сайт скоро.">
+    <!-- Заглушка временная: убрать строку ниже вместе с выкладкой боевого сайта. -->
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="stylesheet" href="./styles/main.css?v=3">
+
+    <!-- Иконки. Все пути относительные — репозиторий разворачивается в корень домена,
+         но относительные ссылки переживут и выкладку в подкаталог. -->
+    <link rel="icon" href="./favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="./images/icons/favicons/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicons/apple-touch-icon.png">
+    <link rel="mask-icon" href="./images/icons/favicons/safari-pinned-tab.svg" color="#00201e">
+    <link rel="manifest" href="./site.webmanifest">
+
+    <meta name="apple-mobile-web-app-title" content="George Brooks">
+    <meta name="application-name" content="George Brooks">
+    <meta name="msapplication-config" content="./browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#00201e">
+    <meta name="theme-color" content="#00201e">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="George Brooks">
+    <meta property="og:title" content="George Brooks">
+    <meta property="og:description" content="George Brooks — юридическая компания. Новый сайт скоро.">
+    <meta property="og:image" content="./images/icons/favicons/android-chrome-512x512.png">
+    <meta name="twitter:card" content="summary">
+
+    <noscript>
+        <style>.coming-soon-text:first-of-type { opacity: 1; visibility: visible; }</style>
+    </noscript>
+</head>
+<body>
+<div class="container">
+    <img src="./images/logo/logo.svg" alt="George Brooks" class="logo" width="100" height="100">
+</div>
+<div class="container text-container">
+    <p class="coming-soon-text" lang="ru">Скоро</p>
+    <p class="coming-soon-text" lang="en">Coming soon</p>
+    <p class="coming-soon-text" lang="hy">Շուտով</p>
+    <p class="coming-soon-text" lang="zh">即将推出</p>
+    <p class="coming-soon-text" lang="ar" dir="rtl">قريباً</p>
+    <p class="coming-soon-text" lang="fr">À venir</p>
+    <p class="coming-soon-text" lang="it">Prossimamente</p>
+    <p class="coming-soon-text" lang="de">Demnächst</p>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var texts = document.querySelectorAll('.coming-soon-text');
+        if (!texts.length) return;
+        var currentIndex = 0;
+        texts[currentIndex].classList.add('active');
+        setInterval(function () {
+            texts[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % texts.length;
+            texts[currentIndex].classList.add('active');
+        }, 4000);
+    });
+</script>
+</body>
+</html>
